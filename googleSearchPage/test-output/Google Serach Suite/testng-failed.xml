@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Google Serach Suite]">
+  <test thread-count="5" name="Google Search">
+    <classes>
+      <class name="google.qa.Testcases.SearchPageTest"/>
+    </classes>
+  </test> <!-- Google Search -->
+  <test name="Google Search(failed)">
+    <classes>
+      <class name="google.qa.Testcases.SearchPageTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="Googleaapps"/>
+          <include name="validategooglegmaillnkTest"/>
+          <include name="Googleautosearch"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- google.qa.Testcases.SearchPageTest -->
+    </classes>
+  </test> <!-- Google Search(failed) -->
+</suite> <!-- Failed suite [Google Serach Suite] -->
