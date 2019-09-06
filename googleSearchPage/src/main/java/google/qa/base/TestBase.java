@@ -26,7 +26,10 @@ public class TestBase {
 	public TestBase(){
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/google/qa/config/config.properties");
+
+			
+		  
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "//src//main//resources//config.properties");
 			
 			
 			
@@ -41,9 +44,10 @@ public class TestBase {
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
+		String chrome_driver_path = prop.getProperty("Chrome_driver_path");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:\\Driver\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", chrome_driver_path);	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){

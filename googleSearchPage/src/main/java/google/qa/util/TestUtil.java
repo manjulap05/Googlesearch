@@ -16,10 +16,12 @@ public class TestUtil extends TestBase {
 	public static long IMPLICIT_WAIT = 20;
 	
 	
-	public static void takeScreenshotAtEndOfTest() throws IOException {
+	public static  File takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String currentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+		 FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".jpeg"));
+		 
+		 return scrFile;
 	}
 	
 	
